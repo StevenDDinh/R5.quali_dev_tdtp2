@@ -46,6 +46,16 @@ public class FacteursPremiersTest {
         assertThat(result).containsExactly(2, 3);
     }
 
-    
+    @Test
+    void devrait_retourner_une_liste_avec_3_chiffres_identiques(){
+        //GIVEN
+        int a = 8;
+
+        //WHEN
+        List<Integer> result = FacteursPremiers.generer(a);
+
+        //THEN
+        assertThat(result).containsExactly(2, 2, 2);
+    }
 
 }
