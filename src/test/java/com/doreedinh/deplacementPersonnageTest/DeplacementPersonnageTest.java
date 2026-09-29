@@ -57,6 +57,30 @@ public class DeplacementPersonnageTest {
         assertThat(result).isEqualTo("Ouest");
     }
 
+    @Test
+    void devrait_retourner_nord_avec_4_en_parametre(){
+        //GIVEN
+        int a = 4;
+
+        //WHEN
+        String result = DeplacementPersonnage.tourner(a);
+
+        //THEN
+        assertThat(result).isEqualTo("Nord");
+    }
+
+    @Test
+    void devrait_retourner_est_avec_5_en_parmetre(){
+        //GIVEN
+        int a = 5;
+
+        //WHEN
+        String result = DeplacementPersonnage.tourner(a);
+
+        //THEN
+        assertThat(result).isEqualTo("Est");
+    }
+
 
 
 }
