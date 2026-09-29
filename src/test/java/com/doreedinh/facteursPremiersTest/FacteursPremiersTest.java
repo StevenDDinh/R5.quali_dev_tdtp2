@@ -34,6 +34,18 @@ public class FacteursPremiersTest {
         assertThat(result).containsExactly(2);
     }
 
+    @Test
+    void devrait_retourner_une_liste_avec_2_chiffres_différents(){
+        //GIVEN
+        int a = 6;
 
+        //WHEN
+        List<Integer> result = FacteursPremiers.generer(a);
+
+        //THEN
+        assertThat(result).containsExactly(2, 3);
+    }
+
+    
 
 }
