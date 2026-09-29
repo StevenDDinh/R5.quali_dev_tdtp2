@@ -14,13 +14,26 @@ public class FacteursPremiersTest {
     void devrait_retourner_une_liste_vide(){
         //GIVEN
         int a = 1;
-        FacteursPremiers prems = new FacteursPremiers();
 
         //WHEN
-        List<Integer> result =  prems.generer(a);
+        List<Integer> result =  FacteursPremiers.generer(a);
 
         // THEN
         assertThat(result).isEmpty();
     }
+
+    @Test
+    void devrait_retourner_une_liste_contenant_2(){
+        //GIVEN
+        int a = 2;
+
+        //WHEN
+        List<Integer> result = FacteursPremiers.generer(a);
+
+        //THEN
+        assertThat(result).containsExactly(2);
+    }
+
+
 
 }
