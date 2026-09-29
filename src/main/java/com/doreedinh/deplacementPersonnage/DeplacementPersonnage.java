@@ -4,20 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DeplacementPersonnage {
-    public static List<Integer> generer(int n) {
-        List<Integer> listPremier = new ArrayList<>();
+    public static String tourner(int n) {
+        List<String> list = new ArrayList<>();
+        list.add("Nord");
+        list.add("Est");
+        list.add("Sud");
+        list.add("Ouest");
 
-        int diviseur = 2;
-
-        while (n>1){
-            while(n%diviseur == 0){
-                listPremier.add(diviseur);
-                n = n/diviseur;
-            }
-            diviseur++;
-        }
-
-        return listPremier;
+        return list.get(n%4);
     }
 
 }
