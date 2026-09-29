@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FacteursPremiers {
-    public static List<Integer> generer(int n) {
+    public List<Integer> generer(int n) {
         List<Integer> listPremier = new ArrayList<>();
 
         int diviseur = 2;
